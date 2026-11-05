@@ -1,0 +1,195 @@
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffaf3;
+    color: #3e2723;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #6f4e37;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+#theme-button {
+    float: right;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #795548;
+}
+
+/* Buttons */
+button {
+    background-color: #795548;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4e342e;
+}
+
+/* Menu table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #6f4e37;
+    color: white;
+}
+
+/* Row highlighting */
+.menu-row:hover {
+    background-color: #f3dfc1;
+}
+
+/* Order list */
+.order-item {
+    padding: 5px;
+}
+
+#total {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* Feedback form */
+form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font: inherit;
+}
+
+#char-count {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Utility class for hidden content */
+.hidden {
+    display: none;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #181818;
+    color: #eeeeee;
+}
+
+body.dark-mode section {
+    background-color: #292929;
+    color: #eeeeee;
+}
+
+body.dark-mode h2 {
+    color: #e0b894;
+}
+
+body.dark-mode .menu-row:hover {
+    background-color: #484038;
+}
+
+body.dark-mode th {
+    background-color: #49382e;
+}
+
+body.dark-mode td {
+    border-color: #555;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background-color: #333;
+    color: white;
+    border-color: #777;
+}
+
+body.dark-mode #char-count {
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    background-color: #6f4e37;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+    #theme-button {
+        float: none;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
