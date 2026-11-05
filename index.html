@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Bloom Cafe</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Theme Switcher -->
+    <header>
+        <button id="theme-button">Toggle Light/Dark Mode</button>
+
+        <h1>Bean & Bloom Cafe</h1>
+        <p id="opening-status"></p>
+        <p>Fresh Coffee, Fresh Mornings!</p>
+    </header>
+
+    <main>
+
+        <!-- About Us / Read More -->
+        <section>
+            <article>
+                <h2>About Our Cafe</h2>
+
+                <p>
+                    Welcome to Bean & Bloom Cafe! We serve fresh coffee,
+                    delicious pastries, and tasty treats every day.
+                </p>
+
+                <p id="extra-text" class="hidden">
+                    Our cafe is a friendly place where students can study,
+                    friends can meet, and families can enjoy freshly
+                    prepared food and drinks.
+                </p>
+
+                <button id="read-more-button">Read More</button>
+            </article>
+        </section>
+
+        <!-- Menu Table and Category Filters -->
+        <section>
+            <h2>Our Menu</h2>
+
+            <div class="filter-buttons">
+                <button class="filter-button" data-category="All">All</button>
+                <button class="filter-button" data-category="Drinks">Drinks</button>
+                <button class="filter-button" data-category="Pastries">Pastries</button>
+            </div>
+
+            <table id="menu-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="menu-row" data-category="Drinks">
+                        <td>Espresso</td>
+                        <td>Drinks</td>
+                        <td>$3</td>
+                    </tr>
+
+                    <tr class="menu-row" data-category="Drinks">
+                        <td>Cappuccino</td>
+                        <td>Drinks</td>
+                        <td>$5</td>
+                    </tr>
+
+                    <tr class="menu-row" data-category="Drinks">
+                        <td>Latte</td>
+                        <td>Drinks</td>
+                        <td>$4</td>
+                    </tr>
+
+                    <tr class="menu-row" data-category="Pastries">
+                        <td>Croissant</td>
+                        <td>Pastries</td>
+                        <td>$4</td>
+                    </tr>
+
+                    <tr class="menu-row" data-category="Pastries">
+                        <td>Chocolate Muffin</td>
+                        <td>Pastries</td>
+                        <td>$3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Interactive Order Calculator -->
+        <section>
+            <h2>Place Your Order</h2>
+            <p>Select the items you want to order:</p>
+
+            <div class="order-item">
+                <label>
+                    <input type="checkbox" class="menu-item" data-price="3">
+                    Espresso - $3
+                </label>
+            </div>
+
+            <div class="order-item">
+                <label>
+                    <input type="checkbox" class="menu-item" data-price="5">
+                    Cappuccino - $5
+                </label>
+            </div>
+
+            <div class="order-item">
+                <label>
+                    <input type="checkbox" class="menu-item" data-price="4">
+                    Latte - $4
+                </label>
+            </div>
+
+            <div class="order-item">
+                <label>
+                    <input type="checkbox" class="menu-item" data-price="4">
+                    Croissant - $4
+                </label>
+            </div>
+
+            <div class="order-item">
+                <label>
+                    <input type="checkbox" class="menu-item" data-price="3">
+                    Chocolate Muffin - $3
+                </label>
+            </div>
+
+            <p id="total">Total: $0</p>
+        </section>
+
+        <!-- Feedback / Contact Form -->
+        <section>
+            <h2>Contact Us / Feedback</h2>
+
+            <form id="feedback-form">
+
+                <label for="username">Username:</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="birth-year">Birth Year:</label>
+                <input
+                    type="text"
+                    id="birth-year"
+                    placeholder="e.g. 2002"
+                    inputmode="numeric"
+                >
+
+                <label for="special-notes">Special Order Instructions:</label>
+                <textarea
+                    id="special-notes"
+                    maxlength="100"
+                    rows="4"
+                    placeholder="Write your special requests..."
+                ></textarea>
+
+                <p id="char-count">100 characters remaining</p>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+
+            <p id="form-message" aria-live="polite"></p>
+            <p id="discount-message" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bean & Bloom Cafe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
